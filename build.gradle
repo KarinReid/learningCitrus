@@ -15,15 +15,19 @@ tasks.withType(JavaCompile) {
 
 
 repositories {
-        
      maven { url "http://repo.maven.apache.org/maven2" }
 }
+
+ext {
+    citrusVersion = '2.8.0'
+}
+
 dependencies {
-    compile group: 'com.consol.citrus', name: 'citrus-core', version:'2.7.9'
-    compile group: 'com.consol.citrus', name: 'citrus-java-dsl', version:'2.7.9'
-    compile group: 'com.consol.citrus', name: 'citrus-jms', version:'2.7.9'
-    compile group: 'com.consol.citrus', name: 'citrus-ws', version:'2.7.9'
-    compile group: 'com.consol.citrus', name: 'citrus-http', version:'2.7.9'
+    compile "com.consol.citrus:citrus-core:$citrusVersion"
+    compile "com.consol.citrus:citrus-java-dsl:$citrusVersion"
+    compile "com.consol.citrus:citrus-jms:$citrusVersion"
+    compile "com.consol.citrus:citrus-ws:$citrusVersion"
+    compile "com.consol.citrus:citrus-http:$citrusVersion"
     compile group: 'org.testng', name: 'testng', version:'6.11'
     compile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.25'
     compile group: 'org.slf4j', name: 'jcl-over-slf4j', version:'1.7.25'
